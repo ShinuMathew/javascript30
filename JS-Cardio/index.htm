@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Playfair+Display|Big+Shoulders+Display|Acme|Comfortaa|Exo|Overpass|PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container taskcont">
+        <div id="tasks" class="row tasks">
+            <h1 class="ddheader">Select Beginners Task: </h1>
+            <select id="taskdd" class="taskdd" onchange="showtask(this[this.selectedIndex].value)">
+                <option value="0">SELECT A TASK</option>
+                <option value="1">TASK1</option>
+                <option value="2">TASK2</option>
+                <option value="3">TASK3</option>
+                <option value="4">TASK4</option>
+                <option value="5">TASK5</option>
+                <option value="6">TASK6</option>
+                <option value="7">TASK7</option>
+                <option value="8">TASK8</option>
+                <option value="9">TASK9</option>
+                <option value="10">TASK10</option>
+                <option value="11">TASK11</option>
+            </select>
+        </div>
+        <div id="inttask" class = "row tasks">
+            <h1 class="ddheader">Select Intermediate Task: </h1>
+            <select id="taskdd" class="taskdd" onchange="showinttask(this[this.selectedIndex].value)">
+                <option value="0">SELECT A TASK</option>
+                <option value="1">TASK1</option>
+                <option value="2">TASK2</option>
+            </select>
+        </div>
+        <!-- ===========BEGINNERS TASKS========== -->
+        <div id="task1" class="row task" style="display: none;">
+            <h1>Task 1: <i>isEven</i></h1>
+            <h2>Enter Number: </h2>
+            <input type="number" id="inbox"><br>
+            <button type="button" onclick='isEven()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task2" class="row task" style="display: none;">
+            <h1>Task 2: <i>bothAreOdd</i></h1>
+            <h2>Enter Number 1: </h2>
+            <input type="number" id="inbox1"><br>    
+            <h2>Enter Number 2: </h2>
+            <input type="number" id="inbox2"><br>    
+            <button type="button" onclick='bothAreOdd()' id="submit" title="Submit">Submit</button>
+        </div> 
+        <div id="task3" class="row task" style="display: none;">
+            <h1>Task 3: <i>getFullName</i></h1>
+            <h2>Enter First Name: </h2>
+            <input type="text" id="firstName"><br>
+            <h2>Enter Last Name: </h2>
+            <input type="text" id="lastName"><br>
+            <button type="button" onclick='getFullName()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task4" class="row task" style="display: none;">
+            <h1>Task 4: <i>getLengthOfWord</i></h1>
+            <h2>Enter Word: </h2>
+            <input type="text" id="word"><br>
+            <button type="button" onclick='getLengthOfWord()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task5" class="row task" style="display: none;">
+            <h1>Task 5: <i>isSameLength</i></h1>
+            <h2>Enter Text1: </h2>
+            <input type="text" id="word1"><br>
+            <h2>Enter Text2: </h2>
+            <input type="text" id="word2"><br>
+            <button type="button" onclick='isSameLength()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task6" class="row task" style="display: none;">
+            <h1>Task 6: <i>Pallindrome</i></h1>
+            <h2>Enter Word: </h2>
+            <input type="text" id="palindromtext"><br>
+            <button type="button" onclick='isPallindrome()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task7" class="row task" style="display: none;">
+            <h1>Task 7: <i>getNthElement</i></h1>
+            <h2>Enter the array elements : </h2>
+            <input type="text" id="eleArr" placeholder="Ex: 1 2 3 4"><br>
+            <h2>Enter the index : </h2>
+            <input type="number" id="index"><br>
+            <button type="button" onclick='getNthElement()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task8" class="row task" style="display: none;">
+            <h1>Task 8: <i>getLastElement</i></h1>
+            <h2>Enter the array elements : </h2>
+            <input type="text" id="lastelearr" placeholder="Ex: 1 2 3 4"><br>
+            <button type="button" onclick='getLastElement()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task9" class="row task" style="display: none;">
+            <h1>Task 9: <i>getProperty</i></h1>
+            <h2>Enter Property : </h2>
+            <input type="text" id="prop1"><br>
+            <button type="button" onclick='getProperty()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task10" class="row task" style="display: none;">
+            <h1>Task 10: <i>addProperty</i></h1>
+            <h2>Enter Property : </h2>
+            <input type="text" id="prop2"><br>
+            <h2>Enter Value : </h2>
+            <input type="text" id="value2"><br>
+            <button type="button" onclick='addProperty()' id="submit" title="Submit">Submit</button>
+        </div>
+        <div id="task11" class="row task" style="display: none;">
+            <h1>Task 11: <i>deleteProperty</i></h1>
+            <h2>Enter Property : </h2>
+            <input type="text" id="prop3"><br>
+            <button type="button" onclick='deleteProperty()' id="submit" title="Submit">Submit</button>
+        </div>
+
+        <!-- ===========INTERMEDIATE TASKS========== -->
+        <div id="inttask1" class="row task" style="display: none;">
+            <h1>Enter Object &nbsp;&nbsp;</h1>
+            <!-- <textarea rows="5" cols="50" id="inttasktext"></textarea> -->
+            <button type="button" class = "printvalbutton" onclick='printAllValues()' id="submit" title="Submit">GetAllValuesFromObject</button>                
+        </div>
+        <div id="inttask2" class="row task" style="display: none;">
+            <h1>Enter Object &nbsp;&nbsp;</h1>
+            <!-- <textarea rows="5" cols="50" id="inttasktext"></textarea> -->
+            <button type="button" class = "printvalbutton" onclick='printAllKeys()' id="submit" title="Submit">GetAllKeysFromObject</button>                
+        </div>
+        <div id="result"></div>        
+    </div>
+    <script src="js1.js"></script>
+</body>
+</html>

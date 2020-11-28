@@ -1,0 +1,75 @@
+.taskcont{
+    background-color: antiquewhite;
+    align-content: center;
+}
+
+.tasks, .task{
+    position: relative;
+}
+
+#result{
+    background-color: rgb(173, 191, 240);
+    text-align: center;
+}
+
+.task{
+    align-content: center;
+    margin-left:200px;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+
+.ddheader{
+    padding:10px
+}
+
+.ddheader,
+.taskdd{
+    padding-left: 300px;
+    display: inline;
+    text-align: center;
+}
+.taskdd{
+    padding:15px;
+    margin:10px
+}
+.tasks {
+  background-color: #e0e7b7;
+  color: black;
+  font-family: "Playfair Display", serif, cursive;
+}
+
+.taskdd{
+    height: 50px;
+    width: 250px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.task{
+    font-family: "Playfair Display", serif, cursive;
+}
+
+button{
+    margin:30px;
+    height: 30px;
+    width: 70px
+}
+
+h2{
+    padding:20px;
+    padding-bottom: 0;
+}
+
+input{
+    margin: 20px;
+    margin-bottom: 0;
+    width: 30%;
+    height: 60px;
+    font-size: 40px
+}
+
+.printvalbutton{
+    width: 30%;
+    height: 60px;
+}
